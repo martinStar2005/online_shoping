@@ -35,5 +35,7 @@ class Comment(models.Model):
     datetime_created = models.DateTimeField(auto_now_add=True)
     datetime_modified = models.DateTimeField(auto_now=True)
 
+    active = models.BooleanField(default=True)
+
     def get_absolute_url(self):
         return reverse('detail', args=[self.product_id])
