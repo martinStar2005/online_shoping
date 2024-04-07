@@ -13,6 +13,4 @@ class ProductComment(admin.TabularInline):
 class ProductAdmin(admin.ModelAdmin):
     list_display = ('title', 'price', 'description', 'active')
 
-    inlines = [ProductComment,]
-
-
+    inlines = [ProductComment, ]

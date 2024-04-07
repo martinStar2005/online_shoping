@@ -44,9 +44,13 @@ INSTALLED_APPS = [
     # crispy apps
     'crispy_forms',
     'crispy_bootstrap4',
+
     # allauth apps
     'allauth',
     'allauth.account',
+
+    # rosetta app
+    'rosetta',
 
     # my apps
     'accounts',
@@ -137,6 +141,10 @@ LANGUAGE_CODE = 'fa'
 
 # TIME_ZONE = 'UTC'
 TIME_ZONE = 'Asia/Tehran'
+LANGUAGES = (
+    ('en', 'English'),
+    ('fa', 'Persian'),
+)
 
 USE_I18N = True
 USE_L10N = True
