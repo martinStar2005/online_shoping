@@ -3,6 +3,6 @@ from django import forms
 class AddToCartForm(forms.Form):
     """Create Cart Form"""
 
-    CHOISES_NUMBER = ((i, str(i)) for i in range(20))
+    CHOISES_QUANTITY = ((i, str(i)) for i in range(1, 20))
 
-    number = forms.TypedChoiceField(choices=CHOISES_NUMBER, coerce=int)
+    quantity = forms.TypedChoiceField(choices=CHOISES_QUANTITY, coerce=int)
