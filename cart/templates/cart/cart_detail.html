@@ -59,14 +59,12 @@
                                                             id="qty-1" value="{{ item.quantity }}" min="1">
                                                     </div>
                                                     {{ item.quantity_form.inplace }}
-                                                    <button class="small btn-primary" type="submit">Save</button>
-
-
+                                                    <button class="small-dark fa fa-refresh" type="submit"></button>
                                                 </form>
                                             </td>
                                             <td class="product-total-price">
                                                 <span class="product-price-wrapper">
-                                                    <span class="money">{{ item.product_obj.price }} تومان</span>
+                                                    <span class="money">{{ item.total }} تومان</span>
                                                 </span>
                                             </td>
                                         </tr>
@@ -85,15 +83,9 @@
                 <div class="col-lg-4">
                     <div class="cart-collaterals">
                         <div class="cart-totals">
-                            <h5 class="font-size-14 font-bold mb--15">مجموع</h5>
+                            <h5 class="font-size-14 font-bold mb--15 text-center">مجموع</h5>
                             <div class="cart-calculator">
                                 <div class="cart-calculator__item">
-                                    <div class="cart-calculator__item--head">
-                                        <span>مجموع</span>
-                                    </div>
-                                    <div class="cart-calculator__item--value">
-                                        <span>۳۴۶,۰۰۰ تومان</span>
-                                    </div>
                                 </div>
                                 <div class="cart-calculator__item order-total">
                                     <div class="cart-calculator__item--head">
@@ -101,7 +93,7 @@
                                     </div>
                                     <div class="cart-calculator__item--value">
                                         <span class="product-price-wrapper">
-                                            <span class="money">۳۴۶,۰۰۰ تومان</span>
+                                            <span class="money">{{ cart.get_total }} تومان</span>
                                         </span>
                                     </div>
                                 </div>
