@@ -8,14 +8,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-07 21:35+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2024-04-12 22:18+0200\n"
+"PO-Revision-Date: 2024-04-12 23:48+0330\n"
+"Last-Translator:   <larsen.martin2005@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Translated-Using: django-rosetta 0.10.0\n"
 
 #: .\models.py:33
 msgid "comment text!"
@@ -25,14 +26,18 @@ msgstr "نظر شما"
 msgid "your score!"
 msgstr "امتیاز شما به محصول"
 
-#: .\templates\products\details.html:69
+#: .\templates\products\details.html:71
 msgid "product description"
 msgstr "توضیحات محصول"
 
-#: .\templates\products\details.html:73
+#: .\templates\products\details.html:75
 msgid "attribute"
 msgstr "ویژگی"
 
-#: .\templates\products\details.html:77
+#: .\templates\products\details.html:79
 msgid "comments"
 msgstr "نظرات"
+
+#: .\views.py:44
+msgid "Comment created successfully"
+msgstr "نظر با موفقیت ایجاد شد"

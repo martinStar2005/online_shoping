@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 {% load static %}
+{% load i18n %}
 <html lang="en">
 
 <head>
@@ -48,8 +49,8 @@
                                 <div class="mainmenu-nav d-none d-lg-block w-100 pr-3">
                                     <ul class="mainmenu d-lg-flex jusity-content-end jusity-content-lg-start pt-4">
                                         <li class="mainmenu__item menu-item-has-children active">
-                                            <a href="index.html" class="mainmenu__link">
-                                                <span class="mm-text">خانه</span>
+                                            <a href="{% url 'product_list' %}" class="mainmenu__link">
+                                                <span class="mm-text">{% trans 'Products' %}</span>
                                             </a>
                                         </li>
                                         <li class="mainmenu__item menu-item-has-children">
@@ -79,8 +80,10 @@
                                     </a>
                                 </li>
                                 <li class="header-toolbar__item mini-cart-item">
-                                    <a href="#miniCart" class="header-toolbar__btn toolbar-btn mini-cart-btn">
-                                        <i class="flaticon flaticon-shopping-cart"></i>
+                                    <a href="{% url 'cart:cart_detail' %}"
+                                        class="header-toolbar__btn toolbar-btn mini-cart-btn">
+                                        <i class="flaticon flaticon-shopping-cart">
+                                        </i>
                                         <sup class="mini-cart-count">2</sup>
                                     </a>
                                 </li>

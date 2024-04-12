@@ -76,14 +76,16 @@
                     </div>
                     <div class="row no-gutters border-top pt--20 mt--20">
                         <div class="col-sm-6 text-sm-right">
-                            <button type="submit" class="cart-form__btn">خالی کردن سبد خرید</button>
+                            <a href="{% url 'cart:cart_clear' %}">
+                                <button type="submit" class="cart-form__btn">{% trans 'Clear the Cart' %}</button>
+                            </a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4">
                     <div class="cart-collaterals">
                         <div class="cart-totals">
-                            <h5 class="font-size-14 font-bold mb--15 text-center">مجموع</h5>
+                            <h5 class="font-size-14 font-bold mb--15 text-center">{% trans 'Total' %}</h5>
                             <div class="cart-calculator">
                                 <div class="cart-calculator__item">
                                 </div>
@@ -100,7 +102,7 @@
                             </div>
                         </div>
                         <a href="checkout.html" class="btn btn-fullwidth btn-bg-red btn-color-white btn-hover-2">
-                            ثبت سفارش
+                            {% trans 'Register the ordered' %}
                         </a>
                     </div>
                 </div>
