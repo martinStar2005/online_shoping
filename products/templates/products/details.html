@@ -157,6 +157,7 @@
                                         </li>
                                     </ul>
                                     {% endfor %}
+                                    {% if user.is_authenticated %}
                                     <div class="review-form-wrapper">
                                         <div class="row">
                                             <div class="border-top py-5 w-100"></div>
@@ -186,9 +187,13 @@
                                             </div>
                                         </div>
                                     </div>
+                                    {% else %}
+                                    <p class="text-center">You should Login if you want to create a comment
+                                        <a href="{% url 'account_login' %}" class="text-center">((Login))</a>
+                                    </p>
+                                    {% endif%}
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>
