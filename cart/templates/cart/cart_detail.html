@@ -37,9 +37,11 @@
                                             <td class="product-remove text-left"><a
                                                     href="{% url 'cart:cart_remove' item.product_obj.id %}"><i
                                                         class="flaticon flaticon-cross"></i></a></td>
+                                            {% if item.product_obj.image %}
                                             <td class="product-thumbnail text-left">
-                                                <img src="assets/img/products/prod-10-70x88.jpg" alt="Product Thumnail">
+                                                <img src="{{ item.product_obj.image.url }}" alt="Product Thumnail">
                                             </td>
+                                            {% endif %}
                                             <td class="product-name">
                                                 <h3>
                                                     <a href="{{ item.product_obj.get_absolute_url }}">
