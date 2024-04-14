@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-12 21:46+0200\n"
+"POT-Creation-Date: 2024-04-14 19:00+0200\n"
 "PO-Revision-Date: 2024-04-12 23:28+0330\n"
 "Last-Translator:   <larsen.martin2005@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -30,14 +30,24 @@ msgstr "محصول با موفقیت حذف شد"
 msgid "Cart cleared successfully"
 msgstr "سبد خرید با موفقیت پاک شد"
 
-#: .\templates\cart\cart_detail.html:80
+#: .\templates\cart\asside_cart.html:8 .\templates\cart\cart_detail.html:11
+msgid "Cart"
+msgstr "سبد خرید"
+
+#: .\templates\cart\asside_cart.html:35
+#, fuzzy
+#| msgid "Total"
+msgid "total"
+msgstr "جمع"
+
+#: .\templates\cart\cart_detail.html:82
 msgid "Clear the Cart"
 msgstr "پاکسازی سبد خرید"
 
-#: .\templates\cart\cart_detail.html:88
+#: .\templates\cart\cart_detail.html:90
 msgid "Total"
 msgstr "جمع"
 
-#: .\templates\cart\cart_detail.html:105
+#: .\templates\cart\cart_detail.html:107
 msgid "Register the ordered"
 msgstr "سفارش داده شده را ثبت کنید"
