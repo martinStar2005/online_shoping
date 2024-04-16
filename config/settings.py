@@ -60,6 +60,10 @@ INSTALLED_APPS = [
     'pages',
     'products',
     'cart',
+    'translate',
+
+    # humanize
+    'django.contrib.humanize',
 ]
 
 MIDDLEWARE = [

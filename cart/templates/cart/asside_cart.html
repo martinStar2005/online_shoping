@@ -1,4 +1,6 @@
 {% load i18n %}
+{% load humanize %}
+{% load trans_fa %}
 
 <aside class="mini-cart" id="miniCart">
     <div class="mini-cart-wrapper">
@@ -26,7 +28,8 @@
                                 </a>
                             </span>
                             <span class="mini-cart__product__quantity">
-                                <span>{{ item.product_obj.price }} تومان</span>
+                                <span>
+                                    {{ item.product_obj.price|intcomma:False|en_to_fa }} تومان</span>
                                 &#215; <span>{{ item.quantity }}</span>
                             </span>
                         </div>
@@ -35,7 +38,7 @@
                 </ul>
                 <div class="mini-cart__total">
                     <span>{% trans 'total' %}</span>
-                    <span class="ammount">{{ cart.get_total }} تومان</span>
+                    <span class="ammount">{{ cart.get_total|intcomma:False|en_to_fa }} تومان</span>
                 </div>
                 <div class="mini-cart__buttons">
                     <a href="{% url 'cart:cart_detail' %}" class="btn btn-fullwidth btn-bg-sand mb--20">Go To
