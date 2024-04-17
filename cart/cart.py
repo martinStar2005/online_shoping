@@ -64,7 +64,6 @@ class Cart:
 
     def get_total(self):
         product_ids = self.cart.keys()
-        
 
         return sum(item['quantity'] * item['product_obj'].price for item in self.cart.values())
     
