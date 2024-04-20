@@ -1,3 +1,9 @@
 from django.shortcuts import render
+from .forms import OrderForm
 
-# Create your views here.
+
+def create_order(request):
+    context = {
+        'form': OrderForm()
+    }
+    return render(request, 'orders/order_list.html', context)

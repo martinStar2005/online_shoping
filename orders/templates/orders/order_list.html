@@ -1,0 +1,90 @@
+{% extends '_base.html' %}
+
+{% load static %}
+{% load crispy_forms_tags %}
+{% load comment_tags %}
+{% load i18n %}
+{% load jalali_tags %}
+{% load humanize %}
+{% load trans_fa %}
+
+{% block title %} Order Page {% endblock %}
+
+{% block body %}
+{% translate 'Order Page' as x %}
+{% include 'title_header.html' with header_name=x %}
+
+
+<!-- Main Content Wrapper Start -->
+<div class="main-content-wrapper">
+    <div class="page-content-inner">
+        <div class="container">
+            <div class="row pt--50 pt-md--40 pt-sm--20"></div>
+            <div class="row pb--80 pb-md--60 pb-sm--40">
+                <!-- Checkout Area Start -->
+                <div class="col-lg-6">
+                    <div class="checkout-title mt--10">
+                        <h2>جزئیات سفارش</h2>
+                    </div>
+                    <div class="checkout-form">
+                        <form action="" method="post">
+                            {{ form|crispy }}
+                        </form>
+                    </div>
+                </div>
+                <div class="col-xl-5 offset-xl-1 col-lg-6 mt-md--40">
+                    <div class="order-details">
+                        <div class="checkout-title mt--10">
+                            <h2>سفارش شما</h2>
+                        </div>
+                        <div class="table-content table-responsive mb--30">
+                            <table class="table order-table order-table-2">
+
+                                <thead>
+                                    <tr>
+                                        <th>محصول</th>
+                                        <th class="text-right">قیمت نهایی</th>
+                                    </tr>
+                                </thead>
+                                {% for item in cart %}
+                                <tbody>
+                                    <tr>
+                                        <th>{{ item.product_obj.title }}
+                                            <strong><span>&#10005;</span>
+                                                {{ item.quantity|intcomma:False|en_to_fa}}
+                                            </strong>
+                                        </th>
+                                        <td class="text-right">{{ item.product_obj.price|intcomma:False|en_to_fa }}</td>
+                                    </tr>
+                                </tbody>
+                                {% endfor %}
+                                <tfoot>
+                                    <tr class="cart-subtotal">
+                                        <th>مجموع</th>
+                                        <td class="text-right"> {{ cart.get_total|intcomma:False|en_to_fa }}</td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                        <div class="checkout-payment">
+                            <h2 class="py-5">روش پرداخت</h2>
+                            <form action="#" class="payment-form">
+                                <div class="payment-group mb--10">
+                                    <div class="payment-radio">
+                                        <input type="radio" value="bank" name="payment-method" id="bank" checked>
+                                        <label class="payment-label" for="cheque">درگاه آنلاین زرین پال</label>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!-- Checkout Area End -->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Main Content Wrapper Start -->
+
+
+{% endblock %}
