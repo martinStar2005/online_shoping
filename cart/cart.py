@@ -60,7 +60,6 @@ class Cart:
     def clear(self):
         del self.session['cart']
         self.save()
-        messages.success(self.request, _('Cart cleared successfully'))
 
     def get_total(self):
         product_ids = self.cart.keys()
@@ -69,4 +68,10 @@ class Cart:
     
     def save(self):
         self.session.modified = True
+
+    def is_empty(self):
+        if len(self.cart):
+            return False
+        return True
+
 

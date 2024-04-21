@@ -38,7 +38,7 @@
                                     <div class="form__group col-md-6 mb-sm--30">
                                         <label for="billing_fname" class="form__label form__label--2">
                                             {% trans 'first name' %} <span class="required">*</span></label>
-                                        <input type="text" name="{{ form.firstname.name }}" id="billing_fname"
+                                        <input type="text" name="{{ form.first_name.name }}" id="billing_fname"
                                                class="form__input form__input--2">
                                     </div>
                                     <div class="form__group col-md-6">
@@ -74,9 +74,13 @@
                                                   placeholder="{% trans 'Your can note here if you want !' %}"></textarea>
                                     </div>
                                 </div>
-                                <div class="form-row">
-                                    <button type="submit" class="btn">{% trans 'Submit' %}</button>
-                                </div>
+                                {% if not cart.is_empty %}
+
+
+                                    <div class="form-row">
+                                        <button type="submit" class="btn">{% trans 'Submit' %}</button>
+                                    </div>
+                                {% endif %}
                             </form>
                         </div>
                     </div>

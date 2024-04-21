@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-14 19:00+0200\n"
-"PO-Revision-Date: 2024-04-12 23:28+0330\n"
-"Last-Translator:   <larsen.martin2005@gmail.com>\n"
+"POT-Creation-Date: 2024-04-21 21:59+0200\n"
+"PO-Revision-Date: 2024-04-21 23:33+0330\n"
+"Last-Translator: fdsf sdfsdf <larsen.martin2005@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -26,28 +26,31 @@ msgstr "محصول با موفقیت اضافه شد"
 msgid "The product removed successfully"
 msgstr "محصول با موفقیت حذف شد"
 
-#: .\cart.py:63
-msgid "Cart cleared successfully"
-msgstr "سبد خرید با موفقیت پاک شد"
-
-#: .\templates\cart\asside_cart.html:8 .\templates\cart\cart_detail.html:11
+#: .\templates\cart\asside_cart.html:10 .\templates\cart\cart_detail.html:13
 msgid "Cart"
 msgstr "سبد خرید"
 
-#: .\templates\cart\asside_cart.html:35
-#, fuzzy
+#: .\templates\cart\asside_cart.html:40
 #| msgid "Total"
 msgid "total"
-msgstr "جمع"
+msgstr "جمع کل"
 
-#: .\templates\cart\cart_detail.html:82
+#: .\templates\cart\cart_detail.html:92
 msgid "Clear the Cart"
 msgstr "پاکسازی سبد خرید"
 
-#: .\templates\cart\cart_detail.html:90
+#: .\templates\cart\cart_detail.html:101
 msgid "Total"
-msgstr "جمع"
+msgstr "جمع کل"
 
-#: .\templates\cart\cart_detail.html:107
+#: .\templates\cart\cart_detail.html:121
 msgid "Register the ordered"
 msgstr "سفارش داده شده را ثبت کنید"
+
+#: .\views.py:55
+msgid "Cart cleared successfully"
+msgstr "سبد خرید با موفقیت پاک شد"
+
+#: .\views.py:58
+msgid "Your cart is already cleared"
+msgstr "سبد خرید شما از قبل پاک شده است."
