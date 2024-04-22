@@ -24,7 +24,6 @@ def create_order(request):
             form_obj = order_form.save(commit=False)
             form_obj.user = request.user
             form_obj.save()
-            messages.success(request, _('Your order successfully registered'))
 
             for item in cart:
                 product = item['product_obj']
@@ -39,6 +38,10 @@ def create_order(request):
             request.user.first_name = form_obj.first_name
             request.user.last_name = form_obj.last_name
             request.user.save()
+
+            request.session['user_order'] = form_obj.id
+            return redirect('payment_process')
+
 
     return render(request, 'orders/order_list.html', {
         'form': order_form

@@ -62,6 +62,7 @@ INSTALLED_APPS = [
     'cart',
     'translate',
     'orders',
+    'payment',
 
     # ckeditor
     'ckeditor',
