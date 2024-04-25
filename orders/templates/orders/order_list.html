@@ -78,7 +78,9 @@
 
 
                                     <div class="form-row">
-                                        <button type="submit" class="btn">{% trans 'Submit' %}</button>
+                                        <a href="{% url 'payment_process' %}">
+                                            <button type="submit" class="btn">{% trans 'Submit' %}</button>
+                                        </a>
                                     </div>
                                 {% endif %}
                             </form>
